@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./view/contatos/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./view/animais/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -12,20 +12,20 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'cadastrar',
-    loadChildren: () => import('./view/contatos/cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
+    path: 'registrar',
+    loadChildren: () => import('./view/animais/registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
   {
-    path: 'detalhar',
-    loadChildren: () => import('./view/contatos/detalhar/detalhar.module').then( m => m.DetalharPageModule)
-  },
-  {
-    path: 'signin',
-    loadChildren: () => import('./view/usuarios/signin/signin.module').then( m => m.SigninPageModule)
+    path: 'editar',
+    loadChildren: () => import('./view/animais/editar/editar.module').then( m => m.EditarPageModule)
   },
   {
     path: 'signup',
-    loadChildren: () => import('./view/usuarios/signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () => import('./view/usuarios/sign-up/signup.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'signin',
+    loadChildren: () => import('./view/usuarios/sign-in/signin.module').then( m => m.SignInPageModule)
   },
 ];
 
